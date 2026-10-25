@@ -1,0 +1,49 @@
+name: Decode site images
+
+# The GitHub connector used by the booking bot can only commit text files.
+# Images are committed as base64 text in images-b64/<name>.b64.
+# This workflow decodes them into the repo root (where index.html expects them)
+# and commits the real image files.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "images-b64/**"
+      - ".github/workflows/decode-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: decode-images
+  cancel-in-progress: false
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decode base64 files into repo root
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for f in images-b64/*.b64; do
+            name="$(basename "$f" .b64)"
+            base64 -d "$f" > "$name"
+            echo "decoded $f -> $name ($(stat -c%s "$name") bytes)"
+          done
+
+      - name: Commit decoded images
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- *.jpg
+          if git diff --cached --quiet; then
+            echo "No image changes to commit."
+          else
+            git commit -m "Decode site images from images-b64 [skip ci]"
+            git push
+          fi
