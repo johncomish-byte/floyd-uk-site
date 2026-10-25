@@ -20,6 +20,10 @@
   .logo img { width: 56px; height: 38px; object-fit: cover; border-radius: 4px; }
   .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
   .photo-pair img { width: 100%; height: 340px; object-fit: cover; border-radius: 8px; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .gallery-grid figure { margin: 0; }
+  .gallery-grid img { width: 100%; height: 420px; object-fit: cover; border-radius: 8px; }
+  .gallery-grid figcaption { font-size: 0.85rem; opacity: 0.75; margin-top: 0.5rem; text-align: center; }
   nav ul { display: flex; list-style: none; gap: 2rem; }
   nav a { color: var(--text); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; }
   nav a:hover { color: var(--accent); }
@@ -45,6 +49,8 @@
     nav ul { gap: 1rem; }
     .photo-pair { grid-template-columns: 1fr; }
     .photo-pair img { height: 240px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid img { height: 320px; }
     .gig { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   }
 </style>
@@ -57,6 +63,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#shows">Shows</a></li>
       <li><a href="#experience">The Experience</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -79,7 +86,10 @@
       <p style="margin-top:1rem;">From the classic albums — The Dark Side of the Moon, Wish You Were Here, The Wall, Animals and beyond — every note, vocal nuance and sonic texture is delivered with precision by top UK musicians.</p>
       <p style="margin-top:1rem;">Expect stunning visuals, the iconic circular screen, lasers, and a production that takes you straight back to the classic Floyd concert experience. Perfect for dedicated fans and anyone who wants to hear the music live the way it was meant to be heard.</p>
     </div>
-    <img src="prism.jpg" alt="Prism and rainbow light show">
+    <figure style="margin:0;">
+      <img src="camp-and-furnace.jpg" alt="Floyd UK live at Camp and Furnace, Liverpool, with lasers and back projection">
+      <figcaption style="font-size:0.85rem; opacity:0.7; margin-top:0.5rem; text-align:center;">Live at Camp and Furnace, Liverpool</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -95,7 +105,7 @@
 <section id="experience">
   <h2>The Experience</h2>
   <div class="about-grid">
-    <img src="stage2.jpg" alt="Floyd UK live with circular screen">
+    <img src="camp-and-furnace-2.jpg" alt="Floyd UK on stage at Camp and Furnace, Liverpool, with lasers and Animals back projection">
     <div>
       <p>Every Floyd UK show is built around the full Pink Floyd live experience:</p>
       <ul style="margin:1rem 0 1rem 1.2rem;">
@@ -112,6 +122,25 @@
     <img src="lasers.jpg" alt="Floyd UK laser show fanning out from the prism">
     <img src="stage1.jpg" alt="Live stage with circular screen">
   </div>
+</section>
+
+<section id="gallery">
+  <h2>On Stage</h2>
+  <div class="gallery-grid">
+    <figure>
+      <img src="Jo.JPG" alt="Jo, Floyd UK featured backing vocalist, singing live" style="object-position:center 35%;">
+      <figcaption>Jo, featured vocalist and lead on The Great Gig in the Sky</figcaption>
+    </figure>
+    <figure>
+      <img src="guitar2.jpg" alt="Floyd UK second guitarist live at Camp and Furnace, Liverpool" style="object-position:25% center;">
+      <figcaption>Guitar under the lights</figcaption>
+    </figure>
+    <figure>
+      <img src="keys-vocals.jpg" alt="Floyd UK keys and backing vocals with Animals back projection" style="object-position:center 55%;">
+      <figcaption>Keys and vocals with the Animals projection</figcaption>
+    </figure>
+  </div>
+  <p style="text-align:center; margin-top:1.5rem; font-size:0.85rem; opacity:0.7;">Live at Camp and Furnace, Liverpool</p>
 </section>
 
 <section id="contact" class="contact">
