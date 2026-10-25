@@ -20,8 +20,9 @@
   .logo img { width: 56px; height: 38px; object-fit: cover; border-radius: 4px; }
   .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
   .photo-pair img { width: 100%; height: 340px; object-fit: cover; border-radius: 8px; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-  @media (max-width: 1024px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; }
+  .gallery-grid figure { flex: 0 0 calc((100% - 2.4rem) / 3); }
+  @media (max-width: 1024px) { .gallery-grid figure { flex-basis: calc((100% - 1.2rem) / 2); } }
   .gallery-grid figure { margin: 0; }
   .gallery-grid img { width: 100%; height: 420px; object-fit: cover; border-radius: 8px; }
   .gallery-grid figcaption { font-size: 0.85rem; opacity: 0.75; margin-top: 0.5rem; text-align: center; }
@@ -50,7 +51,7 @@
     nav ul { gap: 1rem; }
     .photo-pair { grid-template-columns: 1fr; }
     .photo-pair img { height: 240px; }
-    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid figure { flex-basis: 100%; }
     .gallery-grid img { height: 320px; }
     .gig { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   }
@@ -133,15 +134,26 @@
       <figcaption>Sax</figcaption>
     </figure>
     <figure>
+      <img src="vocals-bw.jpg" alt="Floyd UK backing vocalist singing, black and white portrait" style="object-position:center 30%;">
+      <figcaption>Backing vocals</figcaption>
+    </figure>
+    <figure>
       <img src="guitar2.jpg" alt="Floyd UK second guitarist live at Camp and Furnace, Liverpool" style="object-position:25% center;">
       <figcaption>Guitar under the lights</figcaption>
+    </figure>
+    <figure>
+      <img src="bass.jpg" alt="Floyd UK bassist playing live with a laser beam behind" style="object-position:40% center;">
+      <figcaption>Bass</figcaption>
     </figure>
     <figure>
       <img src="camp-and-furnace-2.jpg" alt="Floyd UK on stage at Camp and Furnace, Liverpool, with lasers" style="object-position:55% center;">
       <figcaption>Lasers and the Animals projection</figcaption>
     </figure>
   </div>
-  <p style="text-align:center; margin-top:1.5rem; font-size:0.85rem; opacity:0.7;">Live at Camp and Furnace, Liverpool</p>
+  <figure style="margin:1.5rem 0 0;">
+    <img src="bvs.jpg" alt="Two Floyd UK backing vocalists singing under red light" style="width:100%; height:380px; object-fit:cover; object-position:center 30%; border-radius:8px;">
+    <figcaption style="font-size:0.85rem; opacity:0.75; margin-top:0.5rem; text-align:center;">Backing vocals</figcaption>
+  </figure>
 </section>
 
 <section id="contact" class="contact">
