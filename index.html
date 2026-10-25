@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floyd UK – The UK's Leading Pink Floyd Tribute</title>
+<meta name="description" content="Floyd UK deliver an authentic live tribute to Pink Floyd. Experience the classic albums, stunning visuals, lasers and the full Pink Floyd sound live. Get tickets for upcoming gigs.">
+<style>
+  :root {
+    --bg: #050508;
+    --text: #e8e8e8;
+    --accent: #ff6b35;
+    --pink: #ff4d6d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  header { position: fixed; top: 0; width: 100%; background: rgba(5,5,8,0.92); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid #1a1a22; }
+  nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; }
+  .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; color: var(--pink); }
+  nav ul { display: flex; list-style: none; gap: 2rem; }
+  nav a { color: var(--text); text-decoration: none; font-size: 0.9rem; letter-spacing: 1px; }
+  nav a:hover { color: var(--accent); }
+  .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; }
+  .hero-content h1 { font-size: 5rem; font-weight: 900; letter-spacing: 4px; margin-bottom: 0.5rem; color: #fff; text-shadow: 0 0 40px rgba(255,77,109,0.5); }
+  .hero-content p { font-size: 1.4rem; margin-bottom: 2rem; opacity: 0.95; }
+  .btn { display: inline-block; padding: 0.9rem 2.2rem; background: transparent; border: 2px solid var(--accent); color: var(--accent); text-decoration: none; letter-spacing: 1px; transition: 0.3s; margin: 0 0.5rem; }
+  .btn:hover { background: var(--accent); color: #000; }
+  .btn-primary { background: var(--accent); color: #000; }
+  .btn-primary:hover { background: transparent; color: var(--accent); }
+  section { padding: 5.5rem 2rem; max-width: 1200px; margin: 0 auto; }
+  h2 { font-size: 2.4rem; margin-bottom: 2rem; text-align: center; letter-spacing: 2px; color: var(--accent); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+  .about-grid img { width: 100%; border-radius: 8px; }
+  .gigs { background: #0a0a0e; }
+  .gig { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; border-bottom: 1px solid #1a1a22; flex-wrap: wrap; }
+  .gig a.btn { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
+  .contact { text-align: center; }
+  footer { text-align: center; padding: 2rem; border-top: 1px solid #1a1a22; font-size: 0.85rem; opacity: 0.6; }
+  @media (max-width: 768px) {
+    .hero-content h1 { font-size: 3rem; letter-spacing: 2px; }
+    .about-grid { grid-template-columns: 1fr; }
+    nav ul { gap: 1rem; }
+    .gig { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">FLOYD UK</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#shows">Shows</a></li>
+      <li><a href="#experience">The Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>FLOYD UK</h1>
+    <p>The UK's Leading Pink Floyd Tribute</p>
+    <a href="#shows" class="btn btn-primary">Get Tickets</a>
+    <a href="#experience" class="btn">The Experience</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Floyd UK</h2>
+  <div class="about-grid">
+    <div>
+      <p>Floyd UK is the UK’s leading Pink Floyd tribute, meticulously recreating the iconic sound, arrangements and atmosphere of Pink Floyd live.</p>
+      <p style="margin-top:1rem;">From the classic albums — The Dark Side of the Moon, Wish You Were Here, The Wall, Animals and beyond — every note, vocal nuance and sonic texture is delivered with precision by top UK musicians.</p>
+      <p style="margin-top:1rem;">Expect stunning visuals, the iconic circular screen, lasers, and a production that takes you straight back to the classic Floyd concert experience. Perfect for dedicated fans and anyone who wants to hear the music live the way it was meant to be heard.</p>
+    </div>
+    <img src="prism.jpg" alt="Prism and rainbow light show">
+  </div>
+</section>
+
+<section id="shows" class="gigs">
+  <h2>Upcoming Shows</h2>
+  <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">Join us for an unforgettable night of Pink Floyd classics. Tickets selling well — book early.</p>
+  <div id="shows-list">
+    <p style="text-align:center; opacity:0.7;">Loading shows…</p>
+  </div>
+  <p style="margin-top:2rem; text-align:center;">Typical show length: 2–2.5 hours of classic Pink Floyd material with full production.</p>
+</section>
+
+<section id="experience">
+  <h2>The Experience</h2>
+  <div class="about-grid">
+    <img src="stage2.jpg" alt="Floyd UK live with circular screen">
+    <div>
+      <p>Every Floyd UK show is built around the full Pink Floyd live experience:</p>
+      <ul style="margin:1rem 0 1rem 1.2rem;">
+        <li>Note-for-note performances of the classic catalogue</li>
+        <li>Iconic circular video screen with thematic visuals</li>
+        <li>Spectacular laser and lighting show</li>
+        <li>Authentic sound from dedicated musicians</li>
+        <li>Hits and deep cuts from Dark Side, Wish You Were Here, The Wall and more</li>
+      </ul>
+      <p>Whether you’re a lifelong fan or discovering the music live for the first time, Floyd UK delivers the atmosphere, the power and the magic.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:2rem;">
+    <img src="stage1.jpg" alt="Live stage with circular screen" style="max-width:100%; border-radius:8px; max-height:450px; object-fit:cover;">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Bookings & Tickets</h2>
+  <p>For ticket enquiries, venue bookings or general questions, get in touch.</p>
+  <p style="margin:1.5rem 0; font-size:1.2rem;">Contact via the booking channels or official pages</p>
+  <p><a href="https://www.facebook.com/PinkFloydUK" class="btn" target="_blank">Facebook</a></p>
+</section>
+
+<footer>
+  <p>Floyd UK – The UK's Leading Pink Floyd Tribute<br>© 2026 Floyd UK. All rights reserved.</p>
+</footer>
+
+<script>
+async function loadShows() {
+  const container = document.getElementById('shows-list');
+  try {
+    const res = await fetch('shows.json');
+    const shows = await res.json();
+    if (!shows.length) {
+      container.innerHTML = '<p style="text-align:center;">More dates coming soon — check back or contact us.</p>';
+      return;
+    }
+    container.innerHTML = shows.map(s => `
+      <div class="gig">
+        <div>
+          <strong>${s.venue}</strong><br>
+          ${s.date}
+        </div>
+        ${s.ticketUrl ? `<a href="${s.ticketUrl}" class="btn" target="_blank" rel="noopener">Buy Tickets</a>` : ''}
+      </div>
+    `).join('');
+  } catch (e) {
+    container.innerHTML = '<p style="text-align:center;">Shows loading… (shows.json not found or invalid)</p>';
+  }
+}
+loadShows();
+</script>
+</body>
+</html>
