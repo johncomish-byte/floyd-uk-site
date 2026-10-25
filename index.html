@@ -55,6 +55,11 @@
     .gallery-grid img { height: 320px; }
     .gig { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   }
+.wide-row { display:flex; gap:1.2rem; margin-top:1.5rem; }
+.wide-row figure { flex:1 1 0; margin:0; }
+.wide-row img { width:100%; height:300px; object-fit:cover; object-position:center 30%; border-radius:8px; display:block; }
+.wide-row figcaption { font-size:0.85rem; opacity:0.75; margin-top:0.5rem; text-align:center; }
+@media (max-width:768px) { .wide-row { flex-direction:column; } .wide-row img { height:240px; } }
 </style>
 </head>
 <body>
@@ -130,7 +135,7 @@
       <figcaption>Jo, featured vocalist and lead on The Great Gig in the Sky</figcaption>
     </figure>
     <figure>
-      <img src="sax.jpg" alt="Floyd UK saxophonist playing live" style="object-position:center 30%;">
+      <img src="sax-green.jpg" alt="Floyd UK saxophonist playing under green light" style="object-position:center 30%;">
       <figcaption>Sax</figcaption>
     </figure>
     <figure>
@@ -150,10 +155,16 @@
       <figcaption>Lasers and the Animals projection</figcaption>
     </figure>
   </div>
-  <figure style="margin:1.5rem 0 0;">
-    <img src="bvs.jpg" alt="Two Floyd UK backing vocalists singing under red light" style="width:100%; height:380px; object-fit:cover; object-position:center 30%; border-radius:8px;">
-    <figcaption style="font-size:0.85rem; opacity:0.75; margin-top:0.5rem; text-align:center;">Backing vocals</figcaption>
-  </figure>
+  <div class="wide-row">
+    <figure>
+      <img src="bvs.jpg" alt="Two Floyd UK backing vocalists singing under red light">
+      <figcaption>Backing vocals</figcaption>
+    </figure>
+    <figure>
+      <img src="wide-bw.jpg" alt="Floyd UK guitarist and backing vocalists with a vocalist on the big screen">
+      <figcaption>Guitar, vocals and the big screen</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section id="contact" class="contact">
