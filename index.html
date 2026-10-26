@@ -60,6 +60,9 @@
 .wide-row img { width:100%; height:300px; object-fit:cover; object-position:center 30%; border-radius:8px; display:block; }
 .wide-row figcaption { font-size:0.85rem; opacity:0.75; margin-top:0.5rem; text-align:center; }
 @media (max-width:768px) { .wide-row { flex-direction:column; } .wide-row img { height:240px; } }
+#video h2 { text-align:center; }
+.video-wrap { position:relative; max-width:960px; margin:0 auto; aspect-ratio:16/9; border-radius:8px; overflow:hidden; background:#000; }
+.video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 </style>
 </head>
 <body>
@@ -71,6 +74,7 @@
       <li><a href="#shows">Shows</a></li>
       <li><a href="#experience">The Experience</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#video">Video</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -166,6 +170,14 @@
     </figure>
   </div>
   <p style="text-align:center; margin-top:1.5rem; font-size:0.85rem; opacity:0.7;">Photos by David J Broome</p>
+</section>
+
+<section id="video">
+  <h2>Watch Floyd UK</h2>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube-nocookie.com/embed/VKhQder4kV4" title="Floyd UK promo video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p style="text-align:center; margin-top:1rem;"><a href="https://www.youtube.com/watch?v=VKhQder4kV4" class="btn" target="_blank">Watch on YouTube</a></p>
 </section>
 
 <section id="contact" class="contact">
